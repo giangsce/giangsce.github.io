@@ -29,19 +29,19 @@ th,
 tr,
 p,
 a {
-  font-family: 'Verdana', Verdana, Helvetica, sans-serif; 
+  font-family: 'Lato', Verdana, Helvetica, sans-serif; 
   font-size: 14px;
   font-display: auto;
 }
 
 strong {
-  font-family: 'Verdana', Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-display: auto;
 }
 
 h2 {
-  font-family: 'Verdana', Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
   font-display: auto;
   font-weight: normal;
@@ -51,7 +51,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Verdana', Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
   font-display: auto;
@@ -61,7 +61,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'Verdana', Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: normal;
   font-display: auto;
