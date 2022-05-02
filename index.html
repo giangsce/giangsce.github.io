@@ -1,196 +1,31 @@
+<!--Bắt Đầu Navigation -->
+ <nav>
+     <div class="brand">
+         <h2>Niềm Vui Lập Trình</h2>
+     </div>
+     <ul>
+         <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a></li>
+         <li><a href=""><i class="fa fa-info" aria-hidden="true"></i> Về Chúng Tôi</a></li>
+         <li><a href=""><i class="fa fa-truck" aria-hidden="true"></i> Dịch Vụ</a></li>
+         <li><a href=""><i class="fa fa-telegram" aria-hidden="true"></i> Thông Tin</a></li>
+         <li><a href=""><i class="fa fa-location-arrow" aria-hidden="true"></i> Địa Chỉ</a></li>
+     </ul>
+ </nav>
+ <!--Kết Thúc Navigation -->
+ 
+ <!-- Dùng Để Chèn Hình Ảnh-->
+ <section class="section1"></section>
+ <!-- Dùng Để Chèn Hình Ảnh-->
 
-<!doctype html>
-<html lang="ko">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
-<meta charset="utf-8">
-<meta http-equiv="imagetoolbar" content="no">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<title>Materials Electrochemistry Laboratory</title>
-<link rel="stylesheet" href="http://melab.dsso.kr/css/default.css?ver=191202">
-<link rel="stylesheet" href="http://melab.dsso.kr/js/font-awesome/css/font-awesome.min.css?ver=191202">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="http://melab.dsso.kr/css/slick.css?ver=191202">
-<link rel="stylesheet" href="http://melab.dsso.kr/skin/latest/publication/style.css?ver=191202">
-<link rel="stylesheet" href="http://melab.dsso.kr/skin/latest/pic_block2/style.css?ver=191202">
-<link rel="stylesheet" href="http://melab.dsso.kr/skin/latest/gallery/style.css?ver=191202">
-<!--[if lte IE 8]>
-<script src="http://melab.dsso.kr/js/html5.js"></script>
-<![endif]-->
-<script>
-// 자바스크립트에서 사용하는 전역변수 선언
-var g5_url       = "http://melab.dsso.kr";
-var g5_bbs_url   = "http://melab.dsso.kr/bbs";
-var g5_is_member = "";
-var g5_is_admin  = "";
-var g5_is_mobile = "";
-var g5_bo_table  = "";
-var g5_sca       = "";
-var g5_editor    = "";
-var g5_cookie_domain = "";
-</script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<script>
-//스크롤 애니메이션
-$(function(){
-	var $animation_elements = $('.ani');
-	var $window = $(window);
-
-	function check_if_in_view() {
-	  var window_height = $window.height();
-	  var window_top_position = $window.scrollTop();
-	  var window_bottom_position = (window_top_position + window_height);
-	 
-	  $.each($animation_elements, function() {
-		var $element = $(this);
-		var element_height = $element.outerHeight();
-		var element_top_position = $element.offset().top+ 350;
-		var element_bottom_position = (element_top_position + element_height);
-	 
-		//check to see if this current container is within viewport
-		if ((element_bottom_position >= window_top_position) &&
-			(element_top_position <= window_bottom_position)) {
-		  $element.addClass('in-view');
-		} else {
-		  //$element.removeClass('in-view');
-		}
-	  });
-	}
-	$window.on('scroll resize', check_if_in_view);
-	$window.trigger('scroll');
-
-});
-</script>
-<script src="http://melab.dsso.kr/js/jquery-1.12.4.min.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/jquery-migrate-1.4.1.min.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/jquery.menu.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/common.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/wrest.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/placeholders.min.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/default.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/dsso.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/menucmn.js?ver=191202"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="http://melab.dsso.kr/js/slick.js?ver=191202"></script>
-<script src="http://melab.dsso.kr/js/slick.min.js?ver=191202"></script>
-</head>
-<body>
-
-<!--스크롤 애니메이션-->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<!-- 팝업레이어 시작 { -->
-<div id="hd_pop">
-    <h2>팝업레이어 알림</h2>
-
-<span class="sound_only">팝업레이어 알림이 없습니다.</span></div>
-
-<script>
-$(function() {
-    $(".hd_pops_reject").click(function() {
-        var id = $(this).attr('class').split(' ');
-        var ck_name = id[1];
-        var exp_time = parseInt(id[2]);
-        $("#"+id[1]).css("display", "none");
-        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
-    });
-    $('.hd_pops_close').click(function() {
-        var idb = $(this).attr('class').split(' ');
-        $('#'+idb[1]).css('display','none');
-    });
-    $("#hd").css("z-index", 1000);
-});
-</script>
-<!-- } 팝업레이어 끝 -->
-<script>
-//스크롤 애니메이션
-$(function(){
-	var $animation_elements = $('.ani');
-	var $window = $(window);
-
-	function check_if_in_view() {
-	  var window_height = $window.height();
-	  var window_top_position = $window.scrollTop();
-	  var window_bottom_position = (window_top_position + window_height);
-	 
-	  $.each($animation_elements, function() {
-		var $element = $(this);
-		var element_height = $element.outerHeight();
-		var element_top_position = $element.offset().top+ 100;
-		var element_bottom_position = (element_top_position + element_height);
-	 
-		//check to see if this current container is within viewport
-		if ((element_bottom_position >= window_top_position) &&
-			(element_top_position <= window_bottom_position)) {
-		  $element.addClass('in-view');
-		} else {
-		  //$element.removeClass('in-view');
-		}
-	  });
-	}
-	$window.on('scroll resize', check_if_in_view);
-	$window.trigger('scroll');
-});
-</script>
-<script src="/js/owlcarousel/owl.carousel.js"></script>
-<script src="/js/owlcarousel/owl.carousel.min.js"></script>
-<link href="/js/owlcarousel/owl.carousel.min.css" rel="stylesheet" />
-<link href="/js/owlcarousel/owl.carousel.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
-<script src="/js/jquery.bxslider.js"></script>
-
-<!--전체-->
-<div id="wrap">
-	<!--메인비주얼-->
-	<div id="mVisual">
-		<!--메뉴-->
-		<div id="header" class="hdWrap">
-			<div class="nav">
-	<h1><a href="/index.php"><img src="http://melab.dsso.kr/images/common/logo.png" alt="MElab"></a></h1>
-	<div id="cssmenu">
-		<ul>
-			<li>
-				<a href="/bbs/board.php?bo_table=sub1_1">Professor</a>
-				<ul class="sub01">					
-				</ul>
-			</li>
-			<li>
-				<a href="/bbs/board.php?bo_table=sub2_1">Members</a>
-				<ul class="sub02">
-					<li><a href="/bbs/board.php?bo_table=sub2_1">Member</a></li>
-					<li><a href="/bbs/board.php?bo_table=sub2_2">Alumni</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/bbs/board.php?bo_table=sub3_1">Research</a>
-				<ul class="sub03">
-				</ul>
-			</li>
-			<li>
-				<a href="/bbs/board.php?bo_table=sub4_1">Publications</a>
-				<ul class="sub04">
-					<li><a href="/bbs/board.php?bo_table=sub4_1">Papers</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/bbs/board.php?bo_table=sub5_1">Board</a>
-				<ul class="sub05">
-					<li><a href="/bbs/board.php?bo_table=sub5_1">News & Notice</a></li>
-					<li><a href="/bbs/board.php?bo_table=sub5_2">Gallery</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="/bbs/board.php?bo_table=sub6_1">Links</a>
-				<ul class="sub06">					
-				</ul>
-			</li>
-		</ul>
-	</div>
-</div>
+<!--Hiển Thị Nội Dung Văn Bản-->
+ <section class="section2">
+     <h1>What is Lorem Ipsum?</h1>
+     <p>
+         Lorem Ipsum is ...
+     </p>
+     <h1>Why do we use it?</h1>
+     <p>
+         Lorem Ipsum is...
+     </p>
+ </section>
+ <!--Hiển Thị Nội Dung Văn Bản-->
