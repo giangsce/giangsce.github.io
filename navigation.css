@@ -1,10 +1,10 @@
 body{
      margin: 0;
      padding: 0;
-     font-family: 'Lato', Verdana, Helvetica, sans-serif;
+     font-family: 'Lato', sans-serif;
  }
 section.section1{
-     width: 60%;
+     width: 100%;
      height: 100vh;
      box-sizing: border-box;
      background: url(https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603170394/navigation_trong_suot/pexels-life-of-pix-7919_zydtt2.jpg);
@@ -16,8 +16,8 @@ nav{
      position: fixed;
      top: 0;
      left: 0;
-     width: 60%;
-     height: 20px;
+     width: 100%;
+     height: 14px;
      background: rgba(0,0,0,0.4);
      padding: 0 100px ;
      box-sizing: border-box;
