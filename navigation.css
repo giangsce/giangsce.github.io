@@ -1,4 +1,5 @@
-body{
+ /* Image background */ 
+  body{
      margin: 0;
      padding: 0;
      font-family: 'Lato', sans-serif;
@@ -10,31 +11,37 @@ section.section1{
      background: url(https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603170394/navigation_trong_suot/pexels-life-of-pix-7919_zydtt2.jpg);
      background-size: cover;
  }
-
- <!-- Navigation bar-->
+ /* Image background */ 
+  
+/* Navigation bar */
+  
 nav{
      position: fixed;
      top: 0;
      left: 0;
      width: 100%;
      height: 30px;
-     background: rgba(0,0,0,0.4);
-     padding: 0 100px ;
+     background: rgba(0,0,0,0.2);
+     padding: 0 30px ;
      box-sizing: border-box;
      box-shadow: 0 1px 1px rgba(0,0,0,0.12),
      0 2px 2px rgba(0,0,0,0.12),
      0 4px 4px rgba(0,0,0,0.12),
      0 8px 8px rgba(0,0,0,0.12),
      0 16px 16px rgba(0,0,0,0.12);
- }
-
-
-nav .brand{
+ }  
+  /* Navigation bar */
+  
+  
+    /* Text position */
+  nav .brand{
      float: left;
      height: 100%;
      line-height: 30px;
  }
 nav .brand h2{
+    
+     line-height: 25px;
      margin: 0;
      padding: 0;
      color: #fff;
@@ -56,12 +63,15 @@ nav ul li a{
      padding: 0 20px;
      box-sizing: border-box;
      color: #fff;
-     text-decoration: none;     
+     text-decoration: none;
      transition: 0.5s
  }
-
-
-nav ul li a:before{
+  /* Text position */
+ 
+  
+   /* Hover */
+  
+  nav ul li a:before{
      content: '';
      position: absolute;
      top: 0;
@@ -84,6 +94,8 @@ nav ul li a:hover{
 section.section2{
      padding: 150px;
  }
+     /* Hover */
 
-
-
+       /* https://www.niemvuilaptrinh.com/article/tao-thanh-dieu-huong-navigation-trong-suot-bang-html-css */
+  
+  
