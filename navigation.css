@@ -10,6 +10,8 @@ section.section1{
      background: url(https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603170394/navigation_trong_suot/pexels-life-of-pix-7919_zydtt2.jpg);
      background-size: cover;
  }
+
+ <!-- Position of navigation-->
 nav{
      position: fixed;
      top: 0;
@@ -25,6 +27,9 @@ nav{
      0 8px 8px rgba(0,0,0,0.12),
      0 16px 16px rgba(0,0,0,0.12);
  }
+<!-- Position of navigation-->
+
+<!-- Align icon-->
 nav .brand{
      float: left;
      height: 100%;
@@ -69,6 +74,9 @@ nav ul li a:before{
      transform: scaleX(0);
      transition:  transform 0.5s;
  }
+<!-- Align icon-->
+
+<!-- Hover-->
 nav ul li a:hover:before{
      transform-origin: left;
      transform: scaleX(1);
@@ -79,3 +87,4 @@ nav ul li a:hover{
 section.section2{
      padding: 150px;
  }
+<!-- Hover-->
