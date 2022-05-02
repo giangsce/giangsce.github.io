@@ -10,7 +10,7 @@ section.section1{
      max-width:800px;
      max-height:200px;
      box-sizing: border-box;
-     background: /images/bg.png;
+     background: "images/bg.png";
      background-size: cover;
  }
  /* Image background */ 
