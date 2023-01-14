@@ -78,14 +78,9 @@ body,
 td,
 th,
 tr,
+p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
-
-p {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  line-height: 1.12;
   font-size: 14px
 }
 
