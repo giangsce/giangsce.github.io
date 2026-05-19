@@ -149,15 +149,15 @@ name {
 
 .name {
   margin-top: 15px;
-  font-size: 18px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-weight: bold;
-  color: #222;
+  font-size: 14px
 }
 
 .research {
   margin-top: 6px;
-  font-size: 14px;
-  color: #666;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px
 }
 
 /* Responsive */
