@@ -122,63 +122,61 @@ name {
 
 
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 800px;
-  margin: auto;
+
+Member
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Ảnh tròn */
+.card:hover {
+    transform: translateY(-5px);
+}
+
 .card img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ddd;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #e0e0e0;
 }
 
-.name {
-  margin-top: 15px;
+.card name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 14px
-}
-
-.research {
-  margin-top: 6px;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
   }
+
+.card intro {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+   font-size: 14px
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 500px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    width: 150px;
-    height: 150px;
-  }
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
-
-
 
 
 
