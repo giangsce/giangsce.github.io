@@ -126,7 +126,10 @@ name {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 cột */
     gap: 20px 30px;
-    max-width: 500px;
+    width: 100%;
+    max-width: 800px;   
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
