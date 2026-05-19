@@ -130,8 +130,8 @@ name {
     max-width: 800px;   
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2.5%;
-    padding-right: 2.5%;   
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .card {
