@@ -178,6 +178,36 @@ name {
     text-align: center;
 }
 
+.card2 {
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.card h3 {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.card p {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+
 /* Tablet */
 @media (max-width: 768px) {
     .container {
@@ -191,16 +221,6 @@ name {
         grid-template-columns: 1fr;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 .one {
   width: 160px;
