@@ -134,6 +134,18 @@ name {
     padding-right: 20px;
     vertical-align:middle
 }
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột */
+    gap: 20px 30px;
+    width: 100%;
+    max-width: 800px;   
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align:middle
+}
 
 .card {
   align-items: center;
