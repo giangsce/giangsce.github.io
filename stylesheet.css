@@ -134,6 +134,7 @@ name {
     padding-right: 20px;
     vertical-align:middle
 }
+
 .container2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 cột */
@@ -150,7 +151,7 @@ name {
 
 .container3 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px 30px;
     width: 100%;
     max-width: 800px;   
@@ -158,7 +159,7 @@ name {
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
-    vertical-align:middle
+    vertical-align:middle;
 }
 
 
