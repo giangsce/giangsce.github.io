@@ -150,7 +150,7 @@ name {
 }
 .container3 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    grid-template-columns: repeat(2, 1fr); /* 4 cột */
     gap: 20px 30px;
     width: 100%;
     max-width: 800px;   
