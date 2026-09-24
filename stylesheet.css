@@ -127,7 +127,7 @@ name {
     grid-template-columns: repeat(3, 1fr); /* 3 cột */
     gap: 20px 30px;
     width: 100%;
-    max-width: 800px;   
+    max-width: 760px;   
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -151,7 +151,7 @@ name {
 
 .container3 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 cột */
     gap: 20px 30px;
     width: auto;
     max-width: 760px;    
