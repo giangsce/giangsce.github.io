@@ -147,12 +147,12 @@ name {
     vertical-align:middle
 }
 
-}
+
 .container3 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 2 cột */
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
     gap: 20px 30px;
-    width: 50%;
+    width: 100%;
     max-width: 800px;   
     margin-left: auto;
     margin-right: auto;
@@ -160,6 +160,17 @@ name {
     padding-right: 20px;
     vertical-align:middle
 }
+
+.container3 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  
 
 .card {
   align-items: center;
