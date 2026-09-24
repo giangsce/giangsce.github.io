@@ -153,9 +153,12 @@ name {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px 30px;
-    width: 100%;
-    max-width: 800px;   
-
+    width: auto;
+    max-width: auto;   
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     vertical-align:middle;
 }
 
