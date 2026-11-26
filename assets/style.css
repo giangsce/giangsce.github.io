@@ -228,3 +228,13 @@ nav a.active{color:var(--accent-dark);box-shadow:inset 0 -2px 0 var(--accent)}
 /* Join page: full-width, justified text */
 .section-lead.wide{max-width:none;text-align:justify}
 .position p{text-align:justify}
+
+/* VinUni wordmark: Vin #C4232A, Uni black; footer logo shown full-colour on a white badge */
+.logo-org .vin{color:#C4232A}.logo-org .uni{color:#000}
+.site-footer .logo.logo-light{display:inline-flex;background:#fff;padding:10px 16px;border-radius:12px}
+.site-footer .logo-light .logo-svg3 .l3-ink{fill:var(--brand)}
+.site-footer .logo-light .logo-svg3 .l3-gray,.site-footer .logo-light .logo-svg3 .l3-grayf{fill:#93a8b6}
+.site-footer .logo-light .logo-svg3 .l3-shell{stroke:#93a8b6}
+.site-footer .logo-light .logo-svg3 .l3-sign{stroke:var(--brand)}
+.site-footer .logo-light .logo-org .vin{color:#C4232A}.site-footer .logo-light .logo-org .uni{color:#000}
+.site-footer .logo-light .logo-div{background:#c4ced6}
