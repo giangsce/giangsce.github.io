@@ -136,7 +136,7 @@
 
 
 <!-- ===== EV delivery drone flying across ===== -->
-<g><animateTransform attributeName="transform" type="translate" values="1680 92;-80 112" dur="26s" repeatCount="indefinite"/>
+<g><animateTransform attributeName="transform" type="translate" values="1680 34;-80 44" dur="26s" repeatCount="indefinite"/>
   <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="3.2s" repeatCount="indefinite"/>
     <g><animateTransform attributeName="transform" type="rotate" values="4;1;4" dur="3.2s" repeatCount="indefinite"/><use href="#drone" transform="scale(-1 1)"/></g>
   </g>
@@ -190,9 +190,9 @@
 
 
 <!-- ===== Research illustrations (uniform cards; spotlight layer is drawn last, on top) ===== -->
-<g fill="none" stroke="#0f9d9a" stroke-width="1.5" stroke-dasharray="3 5" opacity=".75"><path d="M347 232 C347 256 575 244 575 266"/><path d="M499 232 C499 256 575 244 575 266"/><path d="M651 232 C651 256 575 244 575 266"/><path d="M803 232 C803 256 575 244 575 266"/></g>
+<g fill="none" stroke="#0f9d9a" stroke-width="1.5" stroke-dasharray="3 5" opacity=".75"><path d="M347 170 C347 194 575 244 575 266"/><path d="M499 170 C499 194 575 244 575 266"/><path d="M651 170 C651 194 575 244 575 266"/><path d="M803 170 C803 194 575 244 575 266"/></g>
 <circle cx="575" cy="266" r="3.5" fill="#0f9d9a"/>
-<use href="#cXRD" x="277" y="132"/><use href="#cCell" x="429" y="132"/><use href="#cV" x="581" y="132"/><use href="#cEIS" x="733" y="132"/>
+<use href="#cXRD" x="277" y="70"/><use href="#cCell" x="429" y="70"/><use href="#cV" x="581" y="70"/><use href="#cEIS" x="733" y="70"/>
 <!-- ===== AES Lab building ===== -->
 <g>
   <rect x="440" y="300" width="270" height="152" fill="#eef2f5" stroke="#c4ced6"/>
@@ -357,11 +357,11 @@
 <use href="#tree" x="260" y="448" transform="translate(260 448) scale(.7) translate(-260 -448)"/><use href="#tree" x="1020" y="448" transform="translate(1020 448) scale(.7) translate(-1020 -448)"/>
 <g class="spot-layer" pointer-events="none">
 <!-- spotlight layer: each R&D card enlarges in turn, above everything -->
-<g transform="translate(347 182)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="1;0" keyTimes="0;0.230" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1.75;1.75;1;1" keyTimes="0.000;0.020;0.210;0.230;1.000" dur="16s" repeatCount="indefinite"/><use href="#cXRD" x="-70" y="-50" filter="url(#sh)"/></g></g>
-<g transform="translate(499 182)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.250;0.480" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1;1.75;1.75;1;1" keyTimes="0.000;0.250;0.270;0.460;0.480;1.000" dur="16s" repeatCount="indefinite"/><use href="#cCell" x="-70" y="-50" filter="url(#sh)"/></g></g>
-<g transform="translate(651 182)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.500;0.730" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1;1.75;1.75;1;1" keyTimes="0.000;0.500;0.520;0.710;0.730;1.000" dur="16s" repeatCount="indefinite"/><use href="#cV" x="-70" y="-50" filter="url(#sh)"/></g></g>
-<g transform="translate(803 182)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.750;0.980" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1;1.75;1.75;1;1" keyTimes="0.000;0.750;0.770;0.960;0.980;1.000" dur="16s" repeatCount="indefinite"/><use href="#cEIS" x="-70" y="-50" filter="url(#sh)"/></g></g>
+<g transform="translate(347 120)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="1;0" keyTimes="0;0.230" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1.75;1.75;1;1" keyTimes="0.000;0.020;0.210;0.230;1.000" dur="16s" repeatCount="indefinite"/><use href="#cXRD" x="-70" y="-50" filter="url(#sh)"/></g></g>
+<g transform="translate(499 120)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.250;0.480" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1;1.75;1.75;1;1" keyTimes="0.000;0.250;0.270;0.460;0.480;1.000" dur="16s" repeatCount="indefinite"/><use href="#cCell" x="-70" y="-50" filter="url(#sh)"/></g></g>
+<g transform="translate(651 120)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.500;0.730" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1;1.75;1.75;1;1" keyTimes="0.000;0.500;0.520;0.710;0.730;1.000" dur="16s" repeatCount="indefinite"/><use href="#cV" x="-70" y="-50" filter="url(#sh)"/></g></g>
+<g transform="translate(803 120)" opacity="0"><animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.750;0.980" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="scale" values="1;1;1.75;1.75;1;1" keyTimes="0.000;0.750;0.770;0.960;0.980;1.000" dur="16s" repeatCount="indefinite"/><use href="#cEIS" x="-70" y="-50" filter="url(#sh)"/></g></g>
 </g>
 <!-- hover layer: cards enlarge on mouse-over (interactive when the SVG is inlined in the page) -->
-<g class="rd-hover-layer"><a class="rd-hover" href="research.html" aria-label="XRD structure analysis"><use href="#cXRD" x="277" y="132"/></a><a class="rd-hover" href="research.html" aria-label="Li/Na-ion batteries"><use href="#cCell" x="429" y="132"/></a><a class="rd-hover" href="research.html" aria-label="Voltage profile"><use href="#cV" x="581" y="132"/></a><a class="rd-hover" href="research.html" aria-label="EIS Nyquist plot"><use href="#cEIS" x="733" y="132"/></a></g>
+<g class="rd-hover-layer"><a class="rd-hover" href="research.html" aria-label="XRD structure analysis"><use href="#cXRD" x="277" y="70"/></a><a class="rd-hover" href="research.html" aria-label="Li/Na-ion batteries"><use href="#cCell" x="429" y="70"/></a><a class="rd-hover" href="research.html" aria-label="Voltage profile"><use href="#cV" x="581" y="70"/></a><a class="rd-hover" href="research.html" aria-label="EIS Nyquist plot"><use href="#cEIS" x="733" y="70"/></a></g>
 </svg>
