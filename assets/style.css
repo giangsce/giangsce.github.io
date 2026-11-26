@@ -238,3 +238,10 @@ nav a.active{color:var(--accent-dark);box-shadow:inset 0 -2px 0 var(--accent)}
 .site-footer .logo-light .logo-svg3 .l3-sign{stroke:var(--brand)}
 .site-footer .logo-light .logo-org .vin{color:#C4232A}.site-footer .logo-light .logo-org .uni{color:#000}
 .site-footer .logo-light .logo-div{background:#c4ced6}
+
+/* name pronunciation button */
+.say-name{position:relative;display:inline-flex;align-items:center;justify-content:center;width:1.55em;height:1.55em;margin-left:.35em;padding:0;border:0;border-radius:50%;background:#e2f5f4;color:var(--accent-dark);cursor:pointer;vertical-align:middle;transition:background .2s,color .2s}
+.say-name svg{width:62%;height:62%}
+.say-name:hover,.say-name:focus-visible{background:var(--accent);color:#fff;outline:none}
+.say-name::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;background:var(--brand);color:#fff;font-size:.78rem;font-weight:500;padding:5px 9px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .2s}
+.say-name:hover::after,.say-name:focus-visible::after{opacity:1}

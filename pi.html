@@ -29,7 +29,7 @@
   <div class="pi-card">
     <img src="images/portrait.png" alt="An-Giang Nguyen">
     <div>
-      <p>I prefer to be called by my first name, <strong>Giang</strong>. I received my Ph.D. from the <a href="http://parkcj.jnu.ac.kr">Materials Electrochemistry Laboratory</a>, <a href="https://mse.jnu.ac.kr/mse_eng/index.do">School of Materials Science and Engineering</a>, <a href="https://global.jnu.ac.kr/jnumain_en.aspx">Chonnam National University</a>, South Korea, in 2023. Before that, I received my Bachelor's degree in Chemical Engineering from <a href="https://en.hust.edu.vn/home">Hanoi University of Science and Technology</a>.</p>
+      <p>I prefer to be called by my first name, <strong>Giang</strong><button class="say-name" type="button" aria-label="Hear how to pronounce Giang" data-tip="Giang is pronounced “Zahng” /zaːŋ/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>. I received my Ph.D. from the <a href="http://parkcj.jnu.ac.kr">Materials Electrochemistry Laboratory</a>, <a href="https://mse.jnu.ac.kr/mse_eng/index.do">School of Materials Science and Engineering</a>, <a href="https://global.jnu.ac.kr/jnumain_en.aspx">Chonnam National University</a>, South Korea, in 2023. Before that, I received my Bachelor's degree in Chemical Engineering from <a href="https://en.hust.edu.vn/home">Hanoi University of Science and Technology</a>.</p>
       <p>In late 2023, I wrote a research proposal with my supervisor that was granted $1.08M over 5 years by the National Research Foundation of Korea, at a time when the Korean government substantially reduced R&amp;D funding.</p>
       <p>I am open to research collaboration in secondary batteries and related fields. Feel free to reach out at <a href="mailto:giang.na@vinuni.edu.vn">giang.na@vinuni.edu.vn</a>.</p>
       <p class="chips"><a href="https://bit.ly/giang-cv">CV</a><a href="https://bit.ly/gianggs">Google Scholar</a><a href="https://bit.ly/giangorc">ORCID</a><a href="https://bit.ly/giangrg">ResearchGate</a><a href="https://www.linkedin.com/in/giangsce">LinkedIn</a><a href="https://twitter.com/GiangSCE">X (Twitter)</a><a href="https://bit.ly/giangyt">YouTube</a><a href="https://bit.ly/giangsite">Personal site</a></p>
@@ -68,6 +68,22 @@
   <h2 class="section-title">Conferences & Awards</h2>
   <ul class="news"><li><span class="date">Nov 2025</span><span>Oral Presentation, Vietnam Symposium on Rechargeable Batteries, VinUni, Hanoi, Vietnam</span></li><li><span class="date">Aug 2025</span><span>Poster Presentation, HORIZONS 2025, VinUni, Hanoi, Vietnam</span></li><li><span class="date">Jun 2023</span><span>Poster Presentation, Korean Battery Society Meeting (KOBS), Spring Meeting, Ilsan, South Korea</span></li><li><span class="date">Jun 2023</span><span>Oral Presentation, 243rd Electrochemical Society (ECS) Meeting, Boston, USA</span></li><li><span class="date">Apr 2023</span><span>Poster Presentation, Korean Electrochemical Society (KECS), Spring Meeting, Jeju Island, South Korea</span></li><li><span class="date">Oct 2022</span><span>Poster Presentation, 242nd Electrochemical Society (ECS) Meeting, Atlanta, USA</span></li><li><span class="date">Jun 2022</span><span>1st FIT4NANO Summer School (virtual)</span></li><li><span class="date">Jun 2022</span><span>Poster Presentation, KOBS Spring Meeting, Ilsan, South Korea</span></li><li><span class="date">May 2022</span><span>14th Annual FIB SEM Meeting, Laurel, Maryland, USA (virtual)</span></li><li><span class="date">Apr 2022</span><span>Poster Presentation, KECS Spring Meeting, Jeju Island, South Korea</span></li><li><span class="date">Nov 2021</span><span>3rd POLYSTORAGE workshop: Polymer electrolytes and ionic liquids for energy storage, Ulm, Germany (virtual)</span></li><li><span class="date">Nov 2021</span><span><strong>Best Poster Presentation Award</strong>, KOBS Fall Meeting, Jeju Island, South Korea</span></li><li><span class="date">Sep 2021</span><span>Poster Presentation, 72nd Annual Meeting of the International Society of Electrochemistry (ISE), Jeju Island, South Korea</span></li><li><span class="date">Aug 2021</span><span>7th LAMMPS Workshop and Symposium (virtual)</span></li><li><span class="date">May 2021</span><span>Oral Presentation, Korean Institute of Metals and Materials (KIM+), Spring Meeting, South Korea</span></li><li><span class="date">Apr 2021</span><span>Poster Presentation, KECS Spring Meeting, Busan, South Korea</span></li><li><span class="date">Feb 2021</span><span>7th Virtual Winter School on Computational Chemistry (virtual)</span></li><li><span class="date">Oct 2020</span><span><strong>Best Poster Presentation Award</strong>, KIM+ Fall Meeting, South Korea</span></li></ul>
 </div></section>
+<script>
+(function(){
+  function say(){
+    if(!('speechSynthesis' in window)) return;
+    var s=window.speechSynthesis; s.cancel();
+    var vi=s.getVoices().filter(function(v){return /^vi/i.test(v.lang);})[0];
+    var u=new SpeechSynthesisUtterance(vi?'Giang':'Zahng');
+    if(vi){u.voice=vi;u.lang=vi.lang;}else{u.lang='en-US';}
+    u.rate=.85; s.speak(u);
+  }
+  if('speechSynthesis' in window){ speechSynthesis.getVoices(); }
+  document.querySelectorAll('.say-name').forEach(function(b){
+    b.addEventListener('mouseenter',say); b.addEventListener('click',say); b.addEventListener('focus',say);
+  });
+})();
+</script>
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">

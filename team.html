@@ -30,7 +30,7 @@
   <div class="pi-card">
     <img src="images/portrait.png" alt="An-Giang Nguyen">
     <div>
-      <h3>Dr. An-Giang Nguyen <span class="muted">(Giang)</span></h3>
+      <h3>Dr. An-Giang Nguyen <span class="muted">(Giang)</span><button class="say-name" type="button" aria-label="Hear how to pronounce Giang" data-tip="Giang is pronounced “Zahng” /zaːŋ/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></h3>
       <p class="role">Principal Investigator · Center for Environmental Intelligence, VinUniversity</p>
       <p>Giang received his Ph.D. from the Materials Electrochemistry Laboratory, School of Materials Science and Engineering, Chonnam National University (South Korea) in 2023, and his Bachelor's degree in Chemical Engineering from Hanoi University of Science and Technology. He is an Editor of <em>Scientific Reports</em> and has completed 200+ reviews for 50+ journals.</p>
       <p>He has led or contributed to 10+ projects with total funding exceeding $1.1M, from NAFOSTED, VINIF and the British Council.</p>
@@ -51,6 +51,22 @@
   <div class="collab-grid"><a class="collab" href="https://jnu-melab.com/"><img src="images/c/c1.png" alt="" loading="lazy"><span><strong>Prof. Chan-Jin Park</strong>Chonnam National University, South Korea</span></a><a class="collab" href="https://allduniv.ac.in/faculties/chemistry"><img src="images/c/c2.png" alt="" loading="lazy"><span><strong>Prof. Rakesh Verma</strong>University of Allahabad, India</span></a><a class="collab" href="https://scholar.google.com/citations?user=3qwyZ5cAAAAJ&hl=en"><img src="images/c/c3.png" alt="" loading="lazy"><span><strong>Prof. Le Thi Thu Hang</strong>Hanoi University of Science and Technology, Vietnam</span></a><a class="collab" href="https://research.manchester.ac.uk/en/persons/akilu.kaltungo"><img src="images/c/c4.png" alt="" loading="lazy"><span><strong>Prof. Akilu Yunusa-Kaltungo</strong>The University of Manchester, UK</span></a><a class="collab" href="https://research.manchester.ac.uk/en/persons/clara.cheung/"><img src="images/c/c4.png" alt="" loading="lazy"><span><strong>Prof. Clara Cheung</strong>The University of Manchester, UK</span></a><a class="collab" href="https://people.uwe.ac.uk/Person/PatrickManu"><img src="images/c/c6.png" alt="" loading="lazy"><span><strong>Prof. Patrick Manu</strong>UWE Bristol, UK</span></a><a class="collab" href="http://english.dicp.cas.cn/sourcedb/people/Profes/202411/t20241115_694271.html"><img src="images/c/c7.png" alt="" loading="lazy"><span><strong>Prof. Xiaoen Wang</strong>Dalian Institute of Chemical Physics, CAS, China</span></a><a class="collab" href="https://scholar.google.com.vn/citations?user=zB12kVgAAAAJ&hl=en"><img src="images/c/c8.png" alt="" loading="lazy"><span><strong>Dr. Bui Ngoc Kien</strong>The University of Tokyo, Japan</span></a></div>
   <p class="more"><a href="join.html">Interested in joining? →</a></p>
 </div></section>
+<script>
+(function(){
+  function say(){
+    if(!('speechSynthesis' in window)) return;
+    var s=window.speechSynthesis; s.cancel();
+    var vi=s.getVoices().filter(function(v){return /^vi/i.test(v.lang);})[0];
+    var u=new SpeechSynthesisUtterance(vi?'Giang':'Zahng');
+    if(vi){u.voice=vi;u.lang=vi.lang;}else{u.lang='en-US';}
+    u.rate=.85; s.speak(u);
+  }
+  if('speechSynthesis' in window){ speechSynthesis.getVoices(); }
+  document.querySelectorAll('.say-name').forEach(function(b){
+    b.addEventListener('mouseenter',say); b.addEventListener('click',say); b.addEventListener('focus',say);
+  });
+})();
+</script>
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
