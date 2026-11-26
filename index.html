@@ -178,6 +178,10 @@
 
 <!-- distant hills -->
 <path d="M0 360 Q160 300 340 340 T720 330 T1100 335 T1600 320 V460 H0Z" fill="#cfe5d0"/>
+<!-- small wind turbines on the hill behind EV charging -->
+<use href="#turbine" x="1196" y="300" transform="translate(1196 300) scale(.36) translate(-1196 -300)"/>
+<use href="#turbine" x="1252" y="284" transform="translate(1252 284) scale(.44) translate(-1252 -284)"/>
+<use href="#turbine" x="1310" y="298" transform="translate(1310 298) scale(.36) translate(-1310 -298)"/>
 <path d="M0 395 Q220 350 470 380 T980 372 T1600 368 V470 H0Z" fill="#b9dba3"/>
 
 <!-- ===== Generation: wind + solar ===== -->
@@ -234,9 +238,71 @@
   <rect x="460" y="270" width="40" height="18" fill="#cfd8de"/><rect x="520" y="276" width="26" height="12" fill="#cfd8de"/>
   <rect x="650" y="262" width="34" height="26" fill="#d9e1e6" stroke="#bfc9d1"/>
   <path d="M655 270 h24 M655 276 h24 M655 282 h24" stroke="#a9b6bf"/>
-  <!-- glass facade -->
+  <!-- glass facade with battery fabrication line inside (one bay per step) -->
   <rect x="458" y="318" width="234" height="84" fill="url(#glass)"/>
-  <path d="M497 318 V402 M536 318 V402 M575 318 V402 M614 318 V402 M653 318 V402 M458 346 H692 M458 374 H692" stroke="#9fd0ea" stroke-width="2"/>
+  <rect x="460" y="320" width="230" height="80" fill="#f3fafc" opacity=".9"/>
+  <rect x="460" y="393" width="230" height="7" fill="#dfe8ee"/>
+  <g fill="#ffffff" opacity=".9"><rect x="468" y="321" width="20" height="2" rx="1"/><rect x="507" y="321" width="20" height="2" rx="1"/><rect x="546" y="321" width="20" height="2" rx="1"/><rect x="585" y="321" width="20" height="2" rx="1"/><rect x="624" y="321" width="20" height="2" rx="1"/><rect x="663" y="321" width="20" height="2" rx="1"/></g>
+  <g class="fab-line">
+    <!-- 1 Mixing -->
+    <rect x="470" y="331" width="15" height="8" rx="1.5" fill="#0b3c5d"/>
+    <line x1="477.5" y1="339" x2="477.5" y2="377" stroke="#5b6b78" stroke-width="1.2"/>
+    <path d="M466 352 H489 L487 384 Q477.5 388 468 384 Z" fill="#ffffff" stroke="#8a99a6"/>
+    <path d="M467.4 362 Q472.5 360 477.5 362 T487.8 362 L487 383.4 Q477.5 387.2 468 383.4 Z" fill="#2b2f36"><animate attributeName="d" values="M467.4 362 Q472.5 360 477.5 362 T487.8 362 L487 383.4 Q477.5 387.2 468 383.4 Z;M467.4 362 Q472.5 364 477.5 362 T487.8 362 L487 383.4 Q477.5 387.2 468 383.4 Z;M467.4 362 Q472.5 360 477.5 362 T487.8 362 L487 383.4 Q477.5 387.2 468 383.4 Z" dur="1.2s" repeatCount="indefinite"/></path>
+    <line x1="471" y1="377" x2="484" y2="377" stroke="#c9d3da" stroke-width="2.2" stroke-linecap="round"><animate attributeName="x1" values="471;484;471" dur=".7s" repeatCount="indefinite"/><animate attributeName="x2" values="484;471;484" dur=".7s" repeatCount="indefinite"/></line>
+    <!-- slurry pipe: mixer -> coater -->
+    <path d="M488 367 H500 V345 H520 V350" fill="none" stroke="#8a99a6" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M488 367 H500 V345 H520 V350" fill="none" stroke="#2b2f36" stroke-width="1.1" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" values="6;0" dur=".5s" repeatCount="indefinite"/></path>
+    <!-- 2 Coating: foil unwind + doctor-blade hopper -->
+    <g transform="translate(507 337)"><circle r="7" fill="#dfe5e9" stroke="#8a99a6"/><g stroke="#8a99a6" stroke-width="1"><path d="M0 -6 V6 M-6 0 H6"/><animateTransform attributeName="transform" type="rotate" values="0;360" dur="3s" repeatCount="indefinite"/></g><circle r="2" fill="#5b6b78"/></g>
+    <path d="M507 344 V380 H601" fill="none" stroke="#b9c3ca" stroke-width="2.4"/>
+    <path d="M513 350 H527 L523 372 H517 Z" fill="#0b3c5d"/>
+    <rect x="516" y="372" width="8" height="5" fill="#5b6b78"/>
+    <path d="M520 378.6 H556" stroke="#2b2f36" stroke-width="2.2" stroke-dasharray="7 1.4"><animate attributeName="stroke-dashoffset" values="8.4;0" dur=".6s" repeatCount="indefinite"/></path>
+    <path d="M556 379 H601" stroke="#2b2f36" stroke-width="1.4" stroke-dasharray="7 1.4"><animate attributeName="stroke-dashoffset" values="8.4;0" dur=".6s" repeatCount="indefinite"/></path>
+    <!-- 3 Calendering: two counter-rotating rollers (+ drying heat above web) -->
+    <g fill="none" stroke="#f4a261" stroke-width="1" stroke-linecap="round" opacity=".8"><path d="M531 372 q2 -3 0 -6 q-2 -3 0 -6"><animate attributeName="opacity" values=".2;1;.2" dur="1.4s" repeatCount="indefinite"/></path><path d="M538 372 q2 -3 0 -6 q-2 -3 0 -6"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></path></g>
+    <rect x="544" y="357" width="23" height="3" fill="#0b3c5d"/><rect x="544" y="357" width="3" height="35" fill="#0b3c5d"/><rect x="564" y="357" width="3" height="35" fill="#0b3c5d"/>
+    <g transform="translate(555.5 370.6)"><circle r="7.6" fill="#a7b4be" stroke="#5b6b78"/><g stroke="#5b6b78" stroke-width="1.2"><path d="M0 -6 V6"/><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="1.6s" repeatCount="indefinite"/></g></g>
+    <g transform="translate(555.5 387.6)"><circle r="7.6" fill="#a7b4be" stroke="#5b6b78"/><g stroke="#5b6b78" stroke-width="1.2"><path d="M0 -6 V6"/><animateTransform attributeName="transform" type="rotate" values="0;360" dur="1.6s" repeatCount="indefinite"/></g></g>
+    <!-- 4 Punching: press ram strokes on the electrode web -->
+    <rect x="580" y="339" width="30" height="6" rx="1" fill="#0b3c5d"/><rect x="580" y="339" width="3" height="53" fill="#0b3c5d"/><rect x="607" y="339" width="3" height="53" fill="#0b3c5d"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 8;0 0" keyTimes="0;.55;.75;1" dur="1.2s" repeatCount="indefinite"/><rect x="589" y="345" width="11" height="22" rx="1" fill="#2a7fb8"/><rect x="591" y="367" width="7" height="4" fill="#5b6b78"/></g>
+    <!-- conveyor: press -> glovebox -> tester -->
+    <rect x="596" y="389.5" width="94" height="4" rx="2" fill="#5b6b78"/>
+    <path d="M598 391.5 H688" stroke="#8a99a6" stroke-width="1" stroke-dasharray="2 3"><animate attributeName="stroke-dashoffset" values="5;0" dur=".5s" repeatCount="indefinite"/></path>
+    <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;22 0" dur="3.6s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.6s" begin="0s" repeatCount="indefinite"/><ellipse cx="601" cy="387.2" rx="3.8" ry="1.6" fill="#2b2f36" stroke="#dfe5e9" stroke-width=".8"/></g>
+    <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;22 0" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/><ellipse cx="601" cy="387.2" rx="3.8" ry="1.6" fill="#2b2f36" stroke="#dfe5e9" stroke-width=".8"/></g>
+    <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;22 0" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><ellipse cx="601" cy="387.2" rx="3.8" ry="1.6" fill="#2b2f36" stroke="#dfe5e9" stroke-width=".8"/></g>
+    <!-- 5 Assembly: Ar glovebox, coin cell stacked layer by layer, then crimped -->
+    <rect x="617" y="343" width="33" height="35" rx="3" fill="#e2f1f5" stroke="#0b3c5d" stroke-width="1.2"/>
+    <rect x="620" y="346" width="27" height="20" rx="1.5" fill="#ffffff" opacity=".75"/>
+    <text x="621.5" y="352" font-family="Inter,Arial,sans-serif" font-size="5" font-weight="700" fill="#0f9d9a">Ar</text>
+    <circle cx="626" cy="372" r="3.8" fill="#0b3c5d"/><circle cx="641" cy="372" r="3.8" fill="#0b3c5d"/>
+    <rect x="621" y="378" width="3" height="14" fill="#5b6b78"/><rect x="643" y="378" width="3" height="14" fill="#5b6b78"/>
+    <path d="M624 370 Q624 365 627.5 364 L629 366.5 Q627 367.5 628 371 Z M643 370 Q643 365 639.5 364 L638 366.5 Q640 367.5 639 371 Z" fill="#0b3c5d" opacity=".75"/>
+    <rect x="627" y="361" width="13" height="4" rx="1.2" fill="#8a99a6"/>
+    <g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.1;.88;.95;1" dur="4.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -9;0 -9;0 0;0 0" keyTimes="0;.08;.2;1" dur="4.8s" repeatCount="indefinite"/><rect x="628.5" y="359.6" width="10" height="1.6" fill="#2b2f36"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.24;.28;.88;.95;1" dur="4.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -9;0 -9;0 0;0 0" keyTimes="0;.26;.38;1" dur="4.8s" repeatCount="indefinite"/><rect x="628" y="358.2" width="11" height="1.4" fill="#ffffff" stroke="#8a99a6" stroke-width=".4"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.42;.46;.88;.95;1" dur="4.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -9;0 -9;0 0;0 0" keyTimes="0;.44;.56;1" dur="4.8s" repeatCount="indefinite"/><rect x="628.5" y="356.6" width="10" height="1.6" fill="#c9d3da"/></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.6;.64;.88;.95;1" dur="4.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 -9;0 -9;0 0;0 0" keyTimes="0;.62;.74;1" dur="4.8s" repeatCount="indefinite"/><path d="M627 357 Q633.5 353.4 640 357 V358 H627 Z" fill="#8a99a6"/></g>
+    <circle cx="633.5" cy="359" r="9" fill="#36c48a" opacity="0"><animate attributeName="opacity" values="0;0;.45;0;0" keyTimes="0;.76;.8;.86;1" dur="4.8s" repeatCount="indefinite"/></circle>
+    <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;18 0" dur="3.6s" begin="-.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="3.6s" begin="-.6s" repeatCount="indefinite"/><circle cx="650" cy="386.4" r="3" fill="#dfe5e9" stroke="#5b6b78" stroke-width=".8"/></g>
+    <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;18 0" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><circle cx="650" cy="386.4" r="3" fill="#dfe5e9" stroke="#5b6b78" stroke-width=".8"/></g>
+    <!-- 6 Testing: battery cycler draws a charge curve, cell fills up -->
+    <rect x="657" y="336" width="31" height="23" rx="2" fill="#0b3c5d"/>
+    <rect x="659.5" y="338.5" width="26" height="15" rx="1" fill="#0e2a3d"/>
+    <path d="M661 352 C663 345 667 347 671 346 S679 344 684 340" fill="none" stroke="#36c48a" stroke-width="1.1" stroke-dasharray="30" stroke-dashoffset="30"><animate attributeName="stroke-dashoffset" values="30;0;0;30" keyTimes="0;.7;.95;1" dur="3s" repeatCount="indefinite"/></path>
+    <circle cx="661" cy="356.3" r="1.1" fill="#36c48a"><animate attributeName="opacity" values="1;.2;1" dur="1s" repeatCount="indefinite"/></circle><circle cx="665" cy="356.3" r="1.1" fill="#f4a261"/>
+    <path d="M668 359 V371 M677 359 V366 H684 V368" fill="none" stroke="#5b6b78" stroke-width="1"/>
+    <rect x="679" y="368" width="10" height="19" rx="1.6" fill="#ffffff" stroke="#0b3c5d" stroke-width="1.1"/><rect x="682" y="366" width="4" height="2" fill="#0b3c5d"/>
+    <rect x="680.5" y="385.5" width="7" height="0" fill="#36c48a"><animate attributeName="y" values="385.5;369.5;369.5;385.5" keyTimes="0;.7;.95;1" dur="3s" repeatCount="indefinite"/><animate attributeName="height" values="0;16;16;0" keyTimes="0;.7;.95;1" dur="3s" repeatCount="indefinite"/></rect>
+    <rect x="664" y="371" width="9" height="4" rx="1" fill="#5b6b78"/>
+  </g>
+  <!-- bay mullions + step labels -->
+  <path d="M497 318 V402 M536 318 V402 M575 318 V402 M614 318 V402 M653 318 V402" stroke="#9fd0ea" stroke-width="2"/>
+  <rect x="458" y="318" width="234" height="84" fill="none" stroke="#9fd0ea" stroke-width="2"/>
+  <g font-family="Inter,Arial,sans-serif" font-size="5.8" font-weight="700" fill="#0b3c5d" text-anchor="middle"><text x="477.5" y="399">Mixing</text><text x="516.5" y="399">Coating</text><text x="555.5" y="399" font-size="5.2">Calendering</text><text x="594.5" y="399">Punching</text><text x="633.5" y="399">Assembly</text><text x="672.5" y="399">Testing</text></g>
   <!-- entrance -->
   <rect x="545" y="412" width="60" height="40" fill="#2b5d80"/><path d="M575 412 V452" stroke="#9fd0ea" stroke-width="2"/>
   <rect x="535" y="406" width="80" height="6" fill="#0b3c5d"/>
@@ -251,16 +317,16 @@
 </g>
 
 
-<!-- ===== Upcycling line: recovered materials -> R&D lab ===== -->
+<!-- ===== Upcycling line: recovered materials -> R&D lab (symmetric bridge, centre x=429) ===== -->
 <g>
-  <rect x="404" y="444" width="40" height="5" rx="2.5" fill="#8a99a6"/>
-  <circle cx="408" cy="446.5" r="2" fill="#5b6b78"/><circle cx="440" cy="446.5" r="2" fill="#5b6b78"/>
-  <rect x="438" y="428" width="6" height="16" fill="#2b5d80"/>
-  <text x="423" y="425" font-family="Inter,Arial,sans-serif" font-size="6.5" font-weight="700" fill="#0f9d9a" text-anchor="middle">upcycling</text>
-  <path d="M414 430 H432 M429 427.5 L432 430 L429 432.5" fill="none" stroke="#0f9d9a" stroke-width="1.3" stroke-linecap="round"/>
-  <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;34 0" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/><rect x="405" y="436" width="8" height="8" rx="1.5" fill="#36c48a" stroke="#fff" stroke-width=".8"/></g>
-  <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;34 0" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/><rect x="405" y="436" width="8" height="8" rx="1.5" fill="#7f8c96" stroke="#fff" stroke-width=".8"/></g>
-  <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;34 0" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><rect x="405" y="436" width="8" height="8" rx="1.5" fill="#2a7fb8" stroke="#fff" stroke-width=".8"/></g>
+  <rect x="408" y="444" width="42" height="5" rx="2.5" fill="#8a99a6"/>
+  <circle cx="412" cy="446.5" r="2" fill="#5b6b78"/><circle cx="446" cy="446.5" r="2" fill="#5b6b78"/>
+  <rect x="411" y="449" width="3" height="3" fill="#5b6b78"/><rect x="444" y="449" width="3" height="3" fill="#5b6b78"/>
+  <text x="429" y="425" font-family="Inter,Arial,sans-serif" font-size="6.5" font-weight="700" fill="#0f9d9a" text-anchor="middle">upcycling</text>
+  <path d="M420 430 H438 M435 427.5 L438 430 L435 432.5" fill="none" stroke="#0f9d9a" stroke-width="1.3" stroke-linecap="round"/>
+  <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;28 0" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/><rect x="411" y="436" width="8" height="8" rx="1.5" fill="#36c48a" stroke="#fff" stroke-width=".8"/></g>
+  <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;28 0" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.6s" begin="-1.2s" repeatCount="indefinite"/><rect x="411" y="436" width="8" height="8" rx="1.5" fill="#7f8c96" stroke="#fff" stroke-width=".8"/></g>
+  <g opacity="0"><animateTransform attributeName="transform" type="translate" values="0 0;28 0" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.6s" begin="-2.4s" repeatCount="indefinite"/><rect x="411" y="436" width="8" height="8" rx="1.5" fill="#2a7fb8" stroke="#fff" stroke-width=".8"/></g>
 </g>
 <!-- ===== grid: pylons + lines ===== -->
 <use href="#pylon" x="745" y="300"/>
@@ -458,7 +524,7 @@
 <section class="section">
   <div class="wrap contact-strip">
     <div><h2 class="section-title">Contact</h2>
-    <p class="contact-lines"><strong>An-Giang Nguyen</strong><br><a href="mailto:giang.na@vinuni.edu.vn">giang.na@vinuni.edu.vn</a><br>Center for Environmental Intelligence, VinUniversity, 2nd Floor, Building D, Vinhomes Ocean Park, Hanoi 100000, Vietnam (<a href="https://maps.app.goo.gl/zWSa4pebakvrFzTW8">Google Maps</a>)</p></div>
+    <p class="contact-lines"><strong>An-Giang Nguyen</strong><br><a href="mailto:giang.na@vinuni.edu.vn">giang.na@vinuni.edu.vn</a><br>Center for Environmental Intelligence, VinUniversity,<br>2nd Floor, Building D, Vinhomes Ocean Park, Hanoi 100000, Vietnam (<a href="https://maps.app.goo.gl/zWSa4pebakvrFzTW8">Google Maps</a>)</p></div>
   </div>
 </section>
 </main>
