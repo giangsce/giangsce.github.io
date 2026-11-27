@@ -263,3 +263,6 @@ nav a.active{color:var(--accent-dark);box-shadow:inset 0 -2px 0 var(--accent)}
 .pub-link:hover{background:var(--accent);color:#fff;text-decoration:none}
 .pub-link.oa{background:#e2f5f4;border-color:#e2f5f4}
 .pub-link.oa:hover{background:var(--accent);border-color:var(--accent)}
+
+/* hero: let height follow width up to 700px so wide screens do not crop the sky (drone, R&D cards) */
+.hero-img.hero-svg{height:clamp(240px,35vw,700px)}
